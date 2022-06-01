@@ -1,6 +1,6 @@
 import pygame,sys
 import os
-import Board_GUI.py
+from Board_GUI import *
 
 pygame.init()
 
@@ -22,7 +22,9 @@ while Run :
             Run = False
     
     generate_row_rects(Screen_width, Screen_height, GameBoard)
+    GameBoard.blit(blk_bishop,(75,0))
     pygame.display.update();
+    
     
 
 

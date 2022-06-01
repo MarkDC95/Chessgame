@@ -1,6 +1,6 @@
 import pygame
 import os
-import Game_Window
+
 
 pygame.init()
 
@@ -9,13 +9,13 @@ Square_width  = win_width//8
 Square_height = win_height//8
 
 # Game board sreen x by y pixels
-GameBoard = pygame.display.set_mode((win_width, win_height))
+#GameBoard = pygame.display.set_mode((win_width, win_height))
 pygame.display.set_caption("Chess Board")
 
 
 # Load images of the pieces
 blk_bishop = pygame.transform.scale(pygame.image.load(os.path.join("Chess pieces", "Blk_bishop.png")),(Square_width,Square_height))
-GameBoard.blit(blk_bishop,(200,0))
+
 blk_rook = pygame.image.load(os.path.join("Chess pieces", "Blk_rook.png"))
 blk_king = pygame.image.load(os.path.join("Chess pieces", "Blk_king.png"))
 blk_queen = pygame.image.load(os.path.join("Chess pieces", "Blk_queen.png"))
@@ -28,7 +28,6 @@ wht_king = pygame.image.load(os.path.join("Chess pieces", "Wht_king.png"))
 wht_queen = pygame.image.load(os.path.join("Chess pieces", "Wht_queen.png"))
 wht_pawn = pygame.image.load(os.path.join("Chess pieces", "Wht_pawn.png"))
 wht_knight = pygame.image.load(os.path.join("Chess pieces", "Wht_knight.png"))
-
 
 #Colour constants
 BLUE  = (0,0,255)
