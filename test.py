@@ -3,3 +3,5 @@ player_1_P  = ["P1","P2","P3","P4","P5","P6","P7","P8"]
 
 player_2_NP = ["R1","Kn1","B1","Q","K","B2","Kn2","R2"]
 player_2_P  = ["P1","P2","P3","P4","P5","P6","P7","P8"]
+
+testing if this file is synched
