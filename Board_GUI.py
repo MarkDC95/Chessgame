@@ -1,7 +1,6 @@
 import pygame
 import os
 
-
 pygame.init()
 
 win_width, win_height = 600, 600
@@ -15,7 +14,6 @@ pygame.display.set_caption("Chess Board")
 
 # Load images of the pieces
 blk_bishop = pygame.transform.scale(pygame.image.load(os.path.join("Chess pieces", "Blk_bishop.png")),(Square_width,Square_height))
-
 blk_rook = pygame.image.load(os.path.join("Chess pieces", "Blk_rook.png"))
 blk_king = pygame.image.load(os.path.join("Chess pieces", "Blk_king.png"))
 blk_queen = pygame.image.load(os.path.join("Chess pieces", "Blk_queen.png"))

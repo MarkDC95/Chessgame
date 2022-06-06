@@ -25,11 +25,6 @@ while Run :
     GameBoard.blit(blk_bishop,(75,0))
     pygame.display.update();
     
-    
-
-
-
-
 
 #close window if out of loop -This will get rid of the error when you force close-
 pygame.quit()
