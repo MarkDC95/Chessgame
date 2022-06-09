@@ -11,7 +11,6 @@ Square_height = win_height//8
 #GameBoard = pygame.display.set_mode((win_width, win_height))
 pygame.display.set_caption("Chess Board")
 
-
 # Load images of the pieces
 blk_bishop = pygame.transform.scale(pygame.image.load(os.path.join("Chess pieces", "Blk_bishop.png")),(Square_width,Square_height))
 blk_rook = pygame.image.load(os.path.join("Chess pieces", "Blk_rook.png"))
@@ -35,7 +34,7 @@ RED   = (255,0,0)
 
 
 
-def generate_row_rects (win_width, win_height, window):
+def generate_row_rects (win_width:int, win_height:int, window:pygame.Surface)-> None:
     #chessboard pixels
     Square_width  = win_width//8
     Square_height = win_height//8
