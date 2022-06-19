@@ -11,30 +11,17 @@ Square_height = win_height//8
 #GameBoard = pygame.display.set_mode((win_width, win_height))
 pygame.display.set_caption("Chess Board")
 
-# Load images of the pieces
-blk_bishop = pygame.transform.scale(pygame.image.load(os.path.join("Chess pieces", "Blk_bishop.png")),(Square_width,Square_height))
-blk_rook = pygame.image.load(os.path.join("Chess pieces", "Blk_rook.png"))
-blk_king = pygame.image.load(os.path.join("Chess pieces", "Blk_king.png"))
-blk_queen = pygame.image.load(os.path.join("Chess pieces", "Blk_queen.png"))
-blk_pawn = pygame.image.load(os.path.join("Chess pieces", "Blk_pawn.png"))
-blk_knight = pygame.image.load(os.path.join("Chess pieces", "Blk_knight.png"))
-
-wht_bishop = pygame.image.load(os.path.join("Chess pieces", "Wht_bishop.png"))
-wht_rook = pygame.image.load(os.path.join("Chess pieces", "Wht_rook.png"))
-wht_king = pygame.image.load(os.path.join("Chess pieces", "Wht_king.png"))
-wht_queen = pygame.image.load(os.path.join("Chess pieces", "Wht_queen.png"))
-wht_pawn = pygame.image.load(os.path.join("Chess pieces", "Wht_pawn.png"))
-wht_knight = pygame.image.load(os.path.join("Chess pieces", "Wht_knight.png"))
-
 #Colour constants
 BLUE  = (0,0,255)
 WHITE = (255,255,255)
+GRAY = (220,220,220)
 BLACK = (0,0,0)
 RED   = (255,0,0)
 
 
 
 def generate_row_rects (win_width:int, win_height:int, window:pygame.Surface)-> None:
+    """Function generates alternating black and white squares"""
     #chessboard pixels
     Square_width  = win_width//8
     Square_height = win_height//8
@@ -48,9 +35,9 @@ def generate_row_rects (win_width:int, win_height:int, window:pygame.Surface)-> 
             colour_ind = True
 
             if colour_index == True:
-                colour  = BLACK
+                colour  = RED
             else:
-                colour = WHITE
+                colour = GRAY
 
             if ii % 2 == 0:
                 rect = pygame.Rect(x0,y0,Square_width,Square_height)
@@ -63,3 +50,24 @@ def generate_row_rects (win_width:int, win_height:int, window:pygame.Surface)-> 
         y0 += Square_height
         colour_index = not(colour_index)
         x0 = 0
+
+class ChessTile:
+    alphaClassList = ['A','B','C','D','E','F','G','H']
+
+    def __init__(self, row:int, col:int):
+        self.name = ChessTile.alphaClassList[row] + ',' + str(col)
+        self.row = row
+        self.col = col
+        self.occ = False
+        self.drawCord = (75*self.col, 75*self.row)
+
+def boardMapCreate() -> list[list]:
+    '''Returns 2D array with class of chess tile variables'''
+    grid = [[0 for _ in range(8)] for _ in range(8)]
+    for i in range(8):
+        for j in range(8):
+            grid[i][j] = ChessTile(i,j)
+    return grid
+
+board = boardMapCreate()
+
