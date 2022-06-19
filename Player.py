@@ -6,7 +6,7 @@ class Player():
         self.side = side
         self.army = []
         if self.side:
-            R1  = Pieces.Rook(0,0,side)
+            R1  = Pieces.Rook(0,0,side) 
             Kn1 = Pieces.Knight(0,1,side) 
             B1  = Pieces.Bishop(0,2,side)
             Q   = Pieces.Queen(0,3,side)

@@ -16,7 +16,7 @@ BLUE  = (0,0,255)
 WHITE = (255,255,255)
 GRAY = (220,220,220)
 BLACK = (0,0,0)
-RED   = (255,0,0)
+RED   = (170,0,0)
 
 
 
@@ -60,6 +60,7 @@ class ChessTile:
         self.col = col
         self.occ = False
         self.drawCord = (75*self.col, 75*self.row)
+        self.pieceOcc = None
 
 def boardMapCreate() -> list[list]:
     '''Returns 2D array with class of chess tile variables'''
