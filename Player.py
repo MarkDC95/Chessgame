@@ -2,46 +2,46 @@
 import Pieces
 
 class Player():
-    def __init__(self,side):
+    def __init__(self,side = True):
         self.side = side
         self.army = []
-        if self.side:
-            R1  = Pieces.Rook(0,0,side) 
-            Kn1 = Pieces.Knight(0,1,side) 
-            B1  = Pieces.Bishop(0,2,side)
-            Q   = Pieces.Queen(0,3,side)
-            K   = Pieces.King(0,4,side)
-            B2  = Pieces.Bishop(0,5,side)
-            Kn2 = Pieces.Knight(0,6,side)
-            R2  = Pieces.Rook(0,7,side)
-            
-            P1 = Pieces.Pawn(1,0,side)
-            P2 = Pieces.Pawn(1,1,side)
-            P3 = Pieces.Pawn(1,2,side)
-            P4 = Pieces.Pawn(1,3,side)
-            P5 = Pieces.Pawn(1,4,side)
-            P6 = Pieces.Pawn(1,5,side)
-            P7 = Pieces.Pawn(1,6,side)
-            P8 = Pieces.Pawn(1,7,side)
 
-        else:
-            R1  = Pieces.Rook(7,0,side)
-            Kn1 = Pieces.Knight(7,1,side) 
-            B1  = Pieces.Bishop(7,2,side)
-            Q   = Pieces.Queen(7,3,side)
-            K   = Pieces.King(7,4,side)
-            B2  = Pieces.Bishop(7,5,side)
-            Kn2 = Pieces.Knight(7,6,side)
-            R2  = Pieces.Rook(7,7,side)
+        if self.side:
+            R1  = Pieces.Rook(0,0,self.side) 
+            Kn1 = Pieces.Knight(0,1,self.side) 
+            B1  = Pieces.Bishop(0,2,self.side)
+            Q   = Pieces.Queen(0,3,self.side)
+            K   = Pieces.King(0,4,self.side)
+            B2  = Pieces.Bishop(0,5,self.side)
+            Kn2 = Pieces.Knight(0,6,self.side)
+            R2  = Pieces.Rook(0,7,self.side)
             
-            P1 = Pieces.Pawn(6,0,side)
-            P2 = Pieces.Pawn(6,1,side)
-            P3 = Pieces.Pawn(6,2,side)
-            P4 = Pieces.Pawn(6,3,side)
-            P5 = Pieces.Pawn(6,4,side)
-            P6 = Pieces.Pawn(6,5,side)
-            P7 = Pieces.Pawn(6,6,side)
-            P8 = Pieces.Pawn(6,7,side)
+            P1 = Pieces.Pawn(1,0,self.side)
+            P2 = Pieces.Pawn(1,1,self.side)
+            P3 = Pieces.Pawn(1,2,self.side)
+            P4 = Pieces.Pawn(2,3,self.side)
+            P5 = Pieces.Pawn(1,4,self.side)
+            P6 = Pieces.Pawn(1,5,self.side)
+            P7 = Pieces.Pawn(1,6,self.side)
+            P8 = Pieces.Pawn(1,7,self.side)
+        else:
+            R1  = Pieces.Rook(7,0,self.side)
+            Kn1 = Pieces.Knight(7,1,self.side) 
+            B1  = Pieces.Bishop(7,2,self.side)
+            Q   = Pieces.Queen(7,3,self.side)
+            K   = Pieces.King(7,4,self.side)
+            B2  = Pieces.Bishop(7,5,self.side)
+            Kn2 = Pieces.Knight(7,6,self.side)
+            R2  = Pieces.Rook(7,7,self.side)
+            
+            P1 = Pieces.Pawn(6,0,self.side)
+            P2 = Pieces.Pawn(6,1,self.side)
+            P3 = Pieces.Pawn(6,2,self.side)
+            P4 = Pieces.Pawn(6,3,self.side)
+            P5 = Pieces.Pawn(6,4,self.side)
+            P6 = Pieces.Pawn(6,5,self.side)
+            P7 = Pieces.Pawn(6,6,self.side)
+            P8 = Pieces.Pawn(6,7,self.side)
 
         self.army.append(R1)
         self.army.append(Kn1)

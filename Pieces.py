@@ -6,7 +6,7 @@ class Pieces(ABC):
     def __init__(self,x:int,y:int,side:bool):
         self.x = x
         self.y = y
-        self.side  = True                       # True = Black
+        self.side  = side                       # True = Black
         self.Alive = True                       # Alive = on board
 
 class King(Pieces):
