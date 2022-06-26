@@ -19,7 +19,7 @@ class Player():
             P1 = Pieces.Pawn(1,0,self.side)
             P2 = Pieces.Pawn(1,1,self.side)
             P3 = Pieces.Pawn(1,2,self.side)
-            P4 = Pieces.Pawn(2,3,self.side)
+            P4 = Pieces.Pawn(1,3,self.side)
             P5 = Pieces.Pawn(1,4,self.side)
             P6 = Pieces.Pawn(1,5,self.side)
             P7 = Pieces.Pawn(1,6,self.side)

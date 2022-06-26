@@ -30,6 +30,7 @@ Game = GameFunctions()
 Player1 = Player.Player(True) 
 Player2 = Player.Player(False)
 board = BEboard.boardMapCreate()
+
 while Game.Run :
     #check for close window event
     Game.exitWindowFunc()
