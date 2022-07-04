@@ -34,15 +34,15 @@ class checkered:
             x0 = 0
 
 class ChessTile:
-    alphaClassList = ['A','B','C','D','E','F','G','H']
+    #alphaClassList = ['A','B','C','D','E','F','G','H']
 
     def __init__(self, row:int, col:int):
-        self.name = ChessTile.alphaClassList[row] + ',' + str(col)
+        self.name = str(row) + ',' + str(col)
         self.row = row
         self.col = col
         self.occ = False
         self.bead = None
-        self.drawCord = (75*self.col, 75*self.row)
+        self.drawCord = (Bin.gameVariables.Square_width*self.col, Bin.gameVariables.Square_width*self.col*self.row)
 
 class BEboard:
     def boardMapCreate() -> list[list]:
@@ -56,7 +56,7 @@ class BEboard:
         return grid
 
     def boardupdate(grid,army_list1:list,army_list2:list):
-        """updates player 1 and 2 objects"""
+        """updates player 1 and 2 piece objects"""
         if army_list1 and army_list2 :
             for i in army_list1:
                 grid[i.x][i.y].occ = True
@@ -65,6 +65,8 @@ class BEboard:
             for i in army_list2:
                 grid[i.x][i.y].occ = True
                 grid[i.x][i.y].bead = i
+        
+        
 
 
 

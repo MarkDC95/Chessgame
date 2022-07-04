@@ -1,5 +1,5 @@
 from Bin import Chess_Images
-from abc import ABC,abstractmethod
+from abc import ABC, abstractmethod
 
 class Pieces(ABC):
     @abstractmethod
@@ -8,6 +8,9 @@ class Pieces(ABC):
         self.y = y
         self.side  = side                       # True = Black
         self.Alive = True                       # Alive = on board
+
+    def Inbound(x,y):
+        pass
 
 class King(Pieces):
     def __init__(self,x,y,side):
@@ -44,3 +47,10 @@ class Pawn(Pieces):
         Pieces.__init__(self,x,y,side)
         self.img = Chess_Images.blk_pawn if self.side else Chess_Images.wht_pawn
         self.name = 'Pawn' + str(self.x) +str(self.y)
+
+    def move(self,xnew,ynew,):
+        if self.side:
+            self.x +=1
+
+
+

@@ -1,4 +1,3 @@
-
 import Pieces
 
 class Player():
@@ -24,6 +23,7 @@ class Player():
             P6 = Pieces.Pawn(1,5,self.side)
             P7 = Pieces.Pawn(1,6,self.side)
             P8 = Pieces.Pawn(1,7,self.side)
+            
         else:
             R1  = Pieces.Rook(7,0,self.side)
             Kn1 = Pieces.Knight(7,1,self.side) 
