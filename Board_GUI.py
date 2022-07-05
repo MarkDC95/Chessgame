@@ -59,12 +59,12 @@ class BEboard:
         """updates player 1 and 2 piece objects"""
         if army_list1 and army_list2 :
             for i in army_list1:
-                grid[i.x][i.y].occ = True
-                grid[i.x][i.y].bead = i
+                grid[i.y][i.x].occ = True
+                grid[i.y][i.x].bead = i
             
             for i in army_list2:
-                grid[i.x][i.y].occ = True
-                grid[i.x][i.y].bead = i
+                grid[i.y][i.x].occ = True
+                grid[i.y][i.x].bead = i
         
         
 
